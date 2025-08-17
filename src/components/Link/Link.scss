@@ -1,0 +1,9 @@
+@import "../../styles/colours";
+@import "../../styles/typography";
+
+.Link,
+.Link:visited {
+  color: $PrimaryMain;
+  text-decoration: underline;
+  font-size: $fontCaption;
+}

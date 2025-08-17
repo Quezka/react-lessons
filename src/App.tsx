@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
+import Loader from "./components/Loader/Loader";
+import Link from "./components/Link/Link";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,15 +14,20 @@ function App() {
 
   return (
     <>
-      <Button size="small" color="primary" style="contained">
-        Label
+      <Button size="large" color="secondary" style="contained" isLoading>
+        Contained Small
       </Button>
-      <Button size="medium" color="primary" style="outlined">
-        Label
+      <br></br>
+      <br></br>
+      <Button size="large" color="secondary" style="outlined" isLoading>
+        Outlined Medium
       </Button>
-      <Button size="large" color="primary" style="text">
-        Label
+      <br></br>
+      <br></br>
+      <Button size="large" color="secondary" style="text" isLoading>
+        Text Large
       </Button>
+      <Link href="https://facebook.com/">Link</Link>
     </>
   );
 }

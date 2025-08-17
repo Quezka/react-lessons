@@ -3,9 +3,33 @@
 
 .button {
   border: none;
+  border-radius: $BorderRadius;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-transform: $fontUppercase;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &.primary,
+  &.secondary {
+    &.contained:disabled {
+      pointer-events: none;
+      background-color: $ActionDisabledBackground;
+      color: $ActionDisabled;
+    }
+    &.outlined:disabled {
+      pointer-events: none;
+      border-color: $ActionDisabledBackground;
+      color: $ActionDisabled;
+    }
+    &.text:disabled {
+      pointer-events: none;
+      color: $ActionDisabled;
+    }
+  }
 
   &.small {
     font-size: $fontSizeButtonSmall;
@@ -40,17 +64,25 @@
       &:focus,
       &:active {
         background-color: $PrimaryLight;
+        outline: none;
       }
     }
 
     &.outlined {
       background-color: transparent;
-      color: red;
+      border: 1px solid $PrimaryOutlinedBorder;
+      color: $PrimaryMain;
 
       &:hover {
         background-color: $PrimaryHover;
       }
+      &:focus,
+      &:active {
+        background-color: $PrimaryFocusVisible;
+        outline: none;
+      }
     }
+
     &.text {
       background-color: transparent;
       color: $PrimaryMain;
@@ -58,19 +90,61 @@
       &:hover {
         background-color: $PrimaryHover;
       }
+      &:focus,
+      &:active {
+        background-color: $PrimaryFocusVisible;
+        outline: none;
+      }
     }
   }
 
   &.secondary {
-    background-color: #6c757d;
-    color: $TextPrimary;
+    &.contained {
+      background-color: $SecondaryMain;
+      color: $SecondaryContrastText;
 
-    &:hover {
-      background-color: #5a6268;
+      &:hover {
+        background-color: $SecondaryDark;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $SecondaryLight;
+        outline: none;
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      border: 1px solid $SecondaryOutlinedBorder;
+      color: $SecondaryMain;
+
+      &:hover {
+        background-color: $SecondaryHover;
+      }
+      &:focus,
+      &:active {
+        background-color: $SecondaryFocusVisible;
+        outline: none;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: $SecondaryMain;
+
+      &:hover {
+        background-color: $SecondaryHover;
+      }
+      &:focus,
+      &:active {
+        background-color: $SecondaryFocusVisible;
+        outline: none;
+      }
     }
   }
 
-  &.danger {
+  &.error {
     background-color: #dc3545;
     color: $TextPrimary;
 
