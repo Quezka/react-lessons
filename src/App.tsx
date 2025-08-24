@@ -3,6 +3,7 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import Loader from "./components/Loader/Loader";
 import Link from "./components/Link/Link";
+import Tooltip from "./components/Tooltip/Tooltip";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +29,21 @@ function App() {
         Text Large
       </Button>
       <Link href="https://facebook.com/">Link</Link>
+      <div className="testDiv">
+        <Tooltip text="Tooltip down" direction="down" />
+      </div>
+      <div className="testDiv2">
+        <Tooltip direction="up" text="Tooltip up" />
+      </div>
+      <div className="testDiv2">
+        <Tooltip direction="left" text="Tooltip left" />
+      </div>
+      <div className="testDiv2">
+        <Tooltip direction="right" text="Tooltip right" />
+      </div>
+      <div className="testDiv2">
+        <Tooltip text="Tooltip none" />
+      </div>
     </>
   );
 }

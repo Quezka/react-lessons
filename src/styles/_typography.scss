@@ -1,4 +1,9 @@
+// Font Family
+$fontFamily: "Roboto";
+
+// Border Radius
 $BorderRadius: 4px;
+
 // Font Size Variables
 $fontSizeh1: 96px;
 $fontSizeh2: 60px;
@@ -12,9 +17,16 @@ $fontSizeBody1: 16px;
 $fontSizeBody2: 14px;
 $fontCaption: 12px;
 $fontOverline: 12px;
+$fontSizeTooltip: 10px;
+
+// Miscellaneous
 $fontUppercase: uppercase;
+$tooltipLineHeight: 14px;
 
 // Button Font Sizes
 $fontSizeButtonLarge: 15px;
 $fontSizeButtonMedium: 14px;
 $fontSizeButtonSmall: 13px;
+
+// Font Weights
+$fontWeightMedium: 500;

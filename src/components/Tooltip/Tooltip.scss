@@ -1,0 +1,65 @@
+@import "../../styles/colours";
+@import "../../styles/typography";
+
+.tooltipArrow {
+  z-index: 100;
+  width: 8px;
+  height: 8px;
+  background-color: $TooltipFill;
+  position: absolute;
+  left: 45%;
+  bottom: -4px;
+  rotate: 45deg;
+}
+
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  z-index: 1000;
+  padding: 4px 8px;
+  background-color: $TooltipFill;
+  color: $TooltipText;
+  border-radius: $BorderRadius;
+  font-weight: $fontWeightMedium;
+  font-family: $fontFamily;
+  font-size: $fontSizeTooltip;
+  line-height: $tooltipLineHeight;
+  transform: translateX(-50%);
+
+  &.none,
+  &.down {
+    left: 50%;
+    top: -29px;
+  }
+
+  &.up {
+    left: 50%;
+    bottom: -29px;
+
+    .tooltipArrow {
+      top: -4px;
+    }
+  }
+
+  &.left {
+    right: -20%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+    .tooltipArrow {
+      left: -4px;
+      top: 34%;
+    }
+  }
+
+  &.right {
+    left: -20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .tooltipArrow {
+      left: 94%;
+      top: 34%;
+    }
+  }
+}
