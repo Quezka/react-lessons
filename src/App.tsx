@@ -3,8 +3,9 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import Loader from "./components/Loader/Loader";
 import Link from "./components/Link/Link";
-import Avatar from "./components/Avatar/Avatar";
+import Avatar, { type AvatarListType } from "./components/Avatar/Avatar";
 import Tooltip from "./components/Tooltip/Tooltip";
+import AvatarList from "./components/AvatarList/AvatarList";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -13,6 +14,23 @@ function App() {
 		alert("Button clicked!");
 		console.log("Button clicked!");
 	};
+
+	const avatarUsers: AvatarListType[] = [
+		{
+			isOnline: false,
+			size: "medium",
+			username: "Arseniy Domashenko",
+		},
+		{
+			isOnline: true,
+			size: "medium",
+			username: "Lucrezia Ursini",
+		},
+		{
+			isOnline: false,
+			size: "medium",
+		},
+	];
 
 	return (
 		<>
@@ -46,6 +64,7 @@ function App() {
 				<Tooltip text="Tooltip none" />
 			</div>
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline></Avatar>
+			<AvatarList users={avatarUsers}></AvatarList>
 		</>
 	);
 }

@@ -9,6 +9,8 @@ interface AvatarProps {
 	username?: string;
 }
 
+type AvatarListType = AvatarProps;
+
 const Avatar: React.FC<AvatarProps> = ({ isOnline = false, shape = "circ", size, img, username }) => {
 	const [initials, setInitials] = useState("");
 
@@ -33,3 +35,4 @@ const Avatar: React.FC<AvatarProps> = ({ isOnline = false, shape = "circ", size,
 };
 
 export default Avatar;
+export type { AvatarListType };
