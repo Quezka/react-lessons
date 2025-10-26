@@ -9,6 +9,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 
 	&.circ {
 		border-radius: 50%;
@@ -67,13 +68,21 @@
 	}
 }
 
+.clickable {
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.clickable:hover {
+	scale: 1.2;
+}
 .avatar-icon > path {
 	fill: $BackgroundPaperElevation-0;
 }
 
 .online-badge {
-	right: 0;
-	bottom: 0;
+	right: -15%;
+	bottom: -15%;
 	position: absolute;
 	background-color: $OnlineGreen;
 	width: 8px;

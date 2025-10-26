@@ -7,11 +7,12 @@ interface AvatarProps {
 	size: "large" | "big" | "medium" | "small";
 	img?: string;
 	username?: string;
+	isClickable?: boolean;
 }
 
 type AvatarListType = AvatarProps;
 
-const Avatar: React.FC<AvatarProps> = ({ isOnline = false, shape = "circ", size, img, username }) => {
+const Avatar: React.FC<AvatarProps> = ({ isOnline = false, shape = "circ", size, img, username, isClickable = false }) => {
 	const [initials, setInitials] = useState("");
 
 	useEffect(() => {
@@ -20,7 +21,7 @@ const Avatar: React.FC<AvatarProps> = ({ isOnline = false, shape = "circ", size,
 		}
 	});
 	return (
-		<div className={`avatar ${shape} ${size} online=${isOnline}`}>
+		<div className={`avatar ${shape} ${size} online=${isOnline} ${isClickable ? `clickable` : ``}`}>
 			{img && <img src={img} alt="User Avatar"></img>}
 			{username && <span className="username">{initials}</span>}
 			{isOnline && <div className="online-badge"></div>}

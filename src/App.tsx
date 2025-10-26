@@ -17,17 +17,18 @@ function App() {
 
 	const avatarUsers: AvatarListType[] = [
 		{
-			isOnline: false,
+			isOnline: true,
 			size: "medium",
 			username: "Arseniy Domashenko",
 		},
 		{
 			isOnline: true,
 			size: "medium",
+			shape: "circ",
 			username: "Lucrezia Ursini",
 		},
 		{
-			isOnline: false,
+			isOnline: true,
 			size: "medium",
 		},
 	];
@@ -63,7 +64,7 @@ function App() {
 			<div className="testDiv2">
 				<Tooltip text="Tooltip none" />
 			</div>
-			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline></Avatar>
+			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers}></AvatarList>
 		</>
 	);
