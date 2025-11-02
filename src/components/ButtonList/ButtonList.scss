@@ -1,0 +1,14 @@
+@import "../../styles/colours";
+@import "../../styles/typography";
+
+.vertical {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: fit-content;
+}
+
+.horizontal {
+	display: flex;
+	align-items: center;
+}

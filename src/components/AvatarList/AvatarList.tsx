@@ -7,7 +7,7 @@ interface AvatarListProps {
 	count: number;
 }
 
-const AvatarList: React.FC<AvatarListProps> = ({ users, count = 0 }) => {
+const AvatarList: React.FC<AvatarListProps> = ({ users, count }) => {
 	return (
 		<div className={`avatar-list`}>
 			{users.map((user, i) => (
@@ -17,7 +17,15 @@ const AvatarList: React.FC<AvatarListProps> = ({ users, count = 0 }) => {
 					style={{ zIndex: users.length - i }}
 				>
 					{/* Перечисление всего объекта */}
-					<Avatar {...user} />
+					{count == 0 && <Avatar {...user} />}
+					{i + 1 < count && <Avatar {...user} />}
+					{i + 1 == count && (
+						<Avatar
+							username={`+ ${users.length - count}`}
+							size={`${user.size}`}
+							shape={`${user.shape == "square" ? `square` : user.shape == "rounded" ? `rounded` : `circ`}`}
+						/>
+					)}
 				</div>
 			))}
 		</div>
