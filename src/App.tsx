@@ -67,7 +67,23 @@ function App() {
 			size: "medium",
 			color: "secondary",
 			buttonType: "contained",
-			isDisabled: true,
+			isDisabled: false,
+			isLoading: false,
+			children: "Test List 2",
+		},
+		{
+			size: "medium",
+			color: "secondary",
+			buttonType: "contained",
+			isDisabled: false,
+			isLoading: false,
+			children: "Test List 2",
+		},
+		{
+			size: "medium",
+			color: "secondary",
+			buttonType: "contained",
+			isDisabled: false,
 			isLoading: false,
 			children: "Test List 2",
 		},
@@ -113,7 +129,7 @@ function App() {
 			</div>
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers} count={6}></AvatarList>
-			<ButtonList buttons={buttonList} orientation="horizontal"></ButtonList>
+			<ButtonList buttons={buttonList} orientation="vertical"></ButtonList>
 		</>
 	);
 }

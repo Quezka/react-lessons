@@ -22,10 +22,11 @@ const Button: React.FC<ButtonProps> = ({
 	isLoading = false,
 	children,
 	style,
+	id,
 	onClick,
 }) => {
 	return (
-		<button style={style} className={`button ${size} ${color} ${buttonType}`} onClick={onClick} disabled={isDisabled}>
+		<button style={style} className={`button ${size} ${color} ${buttonType}`} onClick={onClick} disabled={isDisabled} id={id}>
 			{isLoading && <Loader size={16} />}
 			{children}
 		</button>

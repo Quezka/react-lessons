@@ -5,7 +5,7 @@
 	border: none;
 	border-radius: $BorderRadius;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
+	transition: all 0.3s ease-in-out;
 	text-transform: $fontUppercase;
 	font-weight: 500;
 

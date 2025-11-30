@@ -12,3 +12,26 @@
 	display: flex;
 	align-items: center;
 }
+
+#first-hor {
+	border-top-left-radius: $BorderRadius;
+	border-top-right-radius: $BorderRadius;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#last-hor {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: $BorderRadius;
+	border-bottom-right-radius: $BorderRadius;
+	border-top: 1px solid $SecondaryDark;
+}
+
+#middle-hor {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top: 1px solid $SecondaryDark;
+}
