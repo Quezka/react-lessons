@@ -7,6 +7,7 @@ import Avatar, { type AvatarListType } from "./components/Avatar/Avatar";
 import Tooltip from "./components/Tooltip/Tooltip";
 import AvatarList from "./components/AvatarList/AvatarList";
 import ButtonList from "./components/ButtonList/ButtonList";
+import Input from "./components/Input/Input";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -129,7 +130,8 @@ function App() {
 			</div>
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers} count={6}></AvatarList>
-			<ButtonList buttons={buttonList} orientation="vertical"></ButtonList>
+			<ButtonList buttons={buttonList} orientation="horizontal"></ButtonList>
+			<Input placeholder="Value" inputStyle="standard" label="Label"></Input>
 		</>
 	);
 }

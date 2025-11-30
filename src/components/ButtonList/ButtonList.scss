@@ -13,14 +13,22 @@
 	align-items: center;
 }
 
-#first-hor {
+#first-ver {
 	border-top-left-radius: $BorderRadius;
 	border-top-right-radius: $BorderRadius;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-#last-hor {
+#middle-ver {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top: 1px solid $SecondaryDark;
+}
+
+#last-ver {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	border-bottom-left-radius: $BorderRadius;
@@ -28,10 +36,25 @@
 	border-top: 1px solid $SecondaryDark;
 }
 
+#first-hor {
+	border-top-left-radius: $BorderRadius;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: $BorderRadius;
+	border-bottom-right-radius: 0;
+}
+
 #middle-hor {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
-	border-top: 1px solid $SecondaryDark;
+	border-left: 1px solid $SecondaryDark;
+}
+
+#last-hor {
+	border-top-left-radius: 0;
+	border-top-right-radius: $BorderRadius;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: $BorderRadius;
+	border-left: 1px solid $SecondaryDark;
 }

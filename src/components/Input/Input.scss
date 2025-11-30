@@ -1,0 +1,34 @@
+@import "../../styles/colours";
+@import "../../styles/typography";
+
+input {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	padding-bottom: 6px;
+}
+
+label {
+	color: $TextSecondary;
+	font-size: 12px;
+}
+
+.standard > input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid $EnabledBorder;
+	font-size: 24px;
+	color: $TextPrimary;
+}
+
+.standard > input::placeholder {
+	color: $TextPrimary;
+}
+
+.medium {
+	width: 220px;
+	height: 47.43px;
+}
+
+.small {
+}
