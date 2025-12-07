@@ -1,34 +1,94 @@
 @import "../../styles/colours";
 @import "../../styles/typography";
 
-input {
+.input-container {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+
+.input-container:has(input:focus) {
+	.label {
+		color: $PrimaryMain;
+	}
+
+	.input {
+		border-color: $PrimaryMain;
+		outline: none;
+	}
+}
+
+.input-container:has(input:hover) {
+	.input {
+		border-color: $HoveredBorder;
+	}
+}
+
+.input {
 	width: 100%;
 	height: 100%;
 	padding: 0;
-	padding-bottom: 6px;
-}
-
-label {
-	color: $TextSecondary;
-	font-size: 12px;
-}
-
-.standard > input {
+	transition: all 0.2s ease-in-out;
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid $EnabledBorder;
-	font-size: 24px;
+	font-size: 16px;
 	color: $TextPrimary;
 }
 
-.standard > input::placeholder {
+.input::placeholder {
 	color: $TextPrimary;
 }
 
+.label {
+	color: $TextSecondary;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+// SIZES /////////////////////////////////////////////////////////////////////
 .medium {
 	width: 220px;
-	height: 47.43px;
+	height: 28px;
 }
 
 .small {
+	width: 220px;
+	height: 26.5px;
 }
+//////////////////////////////////////////////////////////////////////////////
+
+// STANDARD //////////////////////////////////////////////////////////////////
+.standard {
+	.input:focus + label {
+		color: $PrimaryMain;
+	}
+}
+
+.standard > input {
+	border-bottom: 2px solid $EnabledBorder;
+}
+//////////////////////////////////////////////////////////////////////////////
+
+// OUTLINED //////////////////////////////////////////////////////////////////
+.outlined {
+	.medium.input {
+		width: 192.8px;
+		height: 20.8px;
+	}
+	.input {
+		border: 2px solid $EnabledBorder;
+		border-radius: 4px;
+		padding: 16px 12px;
+	}
+
+	position: relative;
+
+	.label {
+		position: absolute;
+		background-color: $CommonWhite;
+		padding: 0 4px;
+		left: 12px;
+		top: -6px;
+	}
+}
+//////////////////////////////////////////////////////////////////////////////

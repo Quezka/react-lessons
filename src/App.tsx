@@ -128,10 +128,11 @@ function App() {
 			<div className="testDiv2">
 				<Tooltip text="Tooltip none" />
 			</div>
+			<Input placeholder="Value" size="small" inputStyle="outlined" label="Label"></Input>
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers} count={6}></AvatarList>
+
 			<ButtonList buttons={buttonList} orientation="horizontal"></ButtonList>
-			<Input placeholder="Value" inputStyle="standard" label="Label"></Input>
 		</>
 	);
 }

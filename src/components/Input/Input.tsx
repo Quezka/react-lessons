@@ -12,9 +12,11 @@ interface InputProps extends React.ButtonHTMLAttributes<HTMLInputElement> {
 
 const Input: React.FC<InputProps> = ({ placeholder, isDisabled = false, isError = false, inputStyle, size = "medium", type = "text", label }) => {
 	return (
-		<div className={`input ${isDisabled} ${isError} ${inputStyle} ${size}`}>
-			<label htmlFor="input">{label}</label>
-			<input type={type} id="input" placeholder={placeholder}></input>
+		<div className={`input-container ${isDisabled} ${isError} ${inputStyle}`}>
+			<label className="label" htmlFor="input">
+				{label}
+			</label>
+			<input className={`input ${size}`} type={type} id="input" placeholder={placeholder}></input>
 		</div>
 	);
 };
