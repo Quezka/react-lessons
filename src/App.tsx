@@ -8,6 +8,7 @@ import Tooltip from "./components/Tooltip/Tooltip";
 import AvatarList from "./components/AvatarList/AvatarList";
 import ButtonList from "./components/ButtonList/ButtonList";
 import Input from "./components/Input/Input";
+import Slider from "./components/Slider/Slider";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -113,26 +114,34 @@ function App() {
 				Text Large
 			</Button>
 			<Link href="https://facebook.com/">Link</Link>
-			<div className="testDiv">
-				<Tooltip text="Tooltip down" direction="down" />
+
+			<div className="tooltip-div">
+				<Tooltip text="Tooltip down Tooltip down Tooltip down" direction="down">
+					<div className="testDiv2"></div>
+				</Tooltip>
+				<Tooltip direction="up" text="Tooltip up Tooltip up Tooltip up">
+					<div className="testDiv2"></div>
+				</Tooltip>
+				<Tooltip direction="left" text="Tooltip left Tooltip left Tooltip left">
+					<div className="testDiv2"></div>
+				</Tooltip>
+				<Tooltip direction="right" text="Tooltip right Tooltip right Tooltip right">
+					<div className="testDiv2"></div>
+				</Tooltip>
+				<Tooltip text="Tooltip none Tooltip none Tooltip none">
+					<div className="testDiv2"></div>
+				</Tooltip>
+
+				<Tooltip text="Tooltip Tooltip Tooltip Tooltip" direction="up">
+					<div className="testDiv3"></div>
+				</Tooltip>
 			</div>
-			<div className="testDiv2">
-				<Tooltip direction="up" text="Tooltip up" />
-			</div>
-			<div className="testDiv2">
-				<Tooltip direction="left" text="Tooltip left" />
-			</div>
-			<div className="testDiv2">
-				<Tooltip direction="right" text="Tooltip right" />
-			</div>
-			<div className="testDiv2">
-				<Tooltip text="Tooltip none" />
-			</div>
-			<Input placeholder="Value" size="small" inputStyle="outlined" label="Label"></Input>
+
+			<Input placeholder="Value" inputSize="small" inputStyle="outlined" label="Label"></Input>
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers} count={6}></AvatarList>
-
 			<ButtonList buttons={buttonList} orientation="horizontal"></ButtonList>
+			<Slider minValue={0} maxValue={100} orientation="horizontal"></Slider>
 		</>
 	);
 }

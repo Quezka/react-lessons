@@ -1,0 +1,12 @@
+@import "../../styles/colours";
+@import "../../styles/typography";
+
+.slider-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.range-label {
+	color: $TextPrimary;
+}

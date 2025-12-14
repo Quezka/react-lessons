@@ -1,65 +1,80 @@
 @import "../../styles/colours";
 @import "../../styles/typography";
 
+.tooltip-wrapper {
+	position: relative;
+	display: inline-block;
+	max-width: fit-content;
+}
+
 .tooltipArrow {
-  z-index: 100;
-  width: 8px;
-  height: 8px;
-  background-color: $TooltipFill;
-  position: absolute;
-  left: 45%;
-  bottom: -4px;
-  rotate: 45deg;
+	z-index: 100;
+	width: 8px;
+	height: 8px;
+	background-color: $TooltipFill;
+	position: absolute;
+	rotate: 45deg;
 }
 
 .tooltip {
-  position: absolute;
-  display: inline-block;
-  z-index: 1000;
-  padding: 4px 8px;
-  background-color: $TooltipFill;
-  color: $TooltipText;
-  border-radius: $BorderRadius;
-  font-weight: $fontWeightMedium;
-  font-family: $fontFamily;
-  font-size: $fontSizeTooltip;
-  line-height: $tooltipLineHeight;
-  transform: translateX(-50%);
+	position: absolute;
+	z-index: 1000;
+	padding: 4px 8px;
+	background-color: $TooltipFill;
+	color: $TooltipText;
+	border-radius: $BorderRadius;
+	font-weight: $fontWeightMedium;
+	font-family: $fontFamily;
+	font-size: $fontSizeTooltip;
+	line-height: $tooltipLineHeight;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	word-wrap: break-word;
+	width: fit-content;
 
-  &.none,
-  &.down {
-    left: 50%;
-    top: -29px;
-  }
+	&.none,
+	&.down {
+		left: 50%;
+		top: 100%;
+		transform: translateX(-45%) translateY(8px);
+		.tooltipArrow {
+			left: 45%;
+			top: -4px;
+		}
+	}
 
-  &.up {
-    left: 50%;
-    bottom: -29px;
+	&.up {
+		bottom: 100%;
+		transform: translateX(35%) translateY(-8px);
+		.tooltipArrow {
+			left: 45%;
+			bottom: -4px;
+		}
+	}
 
-    .tooltipArrow {
-      top: -4px;
-    }
-  }
+	&.left {
+		right: 100%;
+		top: 50%;
+		transform: translate(-8px, -50%);
 
-  &.left {
-    right: -20%;
-    top: 50%;
-    transform: translate(50%, -50%);
+		.tooltipArrow {
+			right: -4px;
+			top: 40%;
+		}
+	}
 
-    .tooltipArrow {
-      left: -4px;
-      top: 34%;
-    }
-  }
+	&.right {
+		left: 100%;
+		top: 50%;
+		transform: translate(8px, -50%);
 
-  &.right {
-    left: -20%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+		.tooltipArrow {
+			left: -4px;
+			top: 40%;
+		}
+	}
+}
 
-    .tooltipArrow {
-      left: 94%;
-      top: 34%;
-    }
-  }
+.visible {
+	opacity: 1;
 }
