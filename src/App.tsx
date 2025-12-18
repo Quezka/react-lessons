@@ -141,7 +141,9 @@ function App() {
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers} count={6}></AvatarList>
 			<ButtonList buttons={buttonList} orientation="horizontal"></ButtonList>
-			<Slider minValue={0} maxValue={100} orientation="horizontal"></Slider>
+			<div className="slider-module">
+				<Slider minValue={0} maxValue={100} orientation="horizontal"></Slider>
+			</div>
 		</>
 	);
 }
