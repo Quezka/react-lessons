@@ -9,6 +9,7 @@ import AvatarList from "./components/AvatarList/AvatarList";
 import ButtonList from "./components/ButtonList/ButtonList";
 import Input from "./components/Input/Input";
 import Slider from "./components/Slider/Slider";
+import BottomNav from "./components/BottomNavigation/BottomNav";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -100,6 +101,7 @@ function App() {
 	];
 	return (
 		<>
+			<BottomNav label="Label"></BottomNav>
 			<Button size="large" color="secondary" buttonType="contained" isLoading>
 				Contained Small
 			</Button>
@@ -114,7 +116,6 @@ function App() {
 				Text Large
 			</Button>
 			<Link href="https://facebook.com/">Link</Link>
-
 			<div className="tooltip-div">
 				<Tooltip text="Tooltip down Tooltip down Tooltip down" direction="down">
 					<div className="testDiv2"></div>
@@ -136,7 +137,6 @@ function App() {
 					<div className="testDiv3"></div>
 				</Tooltip>
 			</div>
-
 			<Input placeholder="Value" inputSize="small" inputStyle="outlined" label="Label"></Input>
 			<Avatar size="small" img="" username="Arseniy Domashenko" isOnline isClickable></Avatar>
 			<AvatarList users={avatarUsers} count={6}></AvatarList>

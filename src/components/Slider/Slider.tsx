@@ -33,7 +33,6 @@ const Slider: React.FC<RangeProps> = ({
 		if (isDisabled) return;
 
 		const newValue: number = Number(event.target.value);
-
 		setCurrentValue(newValue);
 	};
 
