@@ -1,0 +1,30 @@
+@import "../../styles/colours";
+@import "../../styles/typography";
+
+.progressBar-container {
+	display: flex;
+	color: $TextPrimary;
+	align-items: center;
+	gap: 16px;
+}
+
+.progressBar {
+	-webkit-appearance: none;
+	border-radius: 0;
+	height: 4px;
+	width: 200px;
+	background-color: $PrimaryMain;
+
+	&.primary {
+		::-webkit-progress-bar,
+		::-webkit-progress-inner-element {
+			background-color: $PrimaryMain;
+		}
+	}
+
+	&.inherit {
+	}
+
+	&.secondary {
+	}
+}

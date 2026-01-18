@@ -10,6 +10,7 @@ import ButtonList from "./components/ButtonList/ButtonList";
 import Input from "./components/Input/Input";
 import Slider from "./components/Slider/Slider";
 import BottomNav from "./components/BottomNavigation/BottomNav";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -101,6 +102,7 @@ function App() {
 	];
 	return (
 		<>
+			<ProgressBar />
 			<BottomNav label="Label"></BottomNav>
 			<Button size="large" color="secondary" buttonType="contained" isLoading>
 				Contained Small
